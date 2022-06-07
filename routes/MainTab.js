@@ -1,12 +1,12 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import MainStack from "./MainStack";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { DefaultTheme } from "react-native-paper";
+import { theme } from "../App";
+import MainStack from "./MainStack";
 
 const MainTab = () => {
   const Tab = createMaterialBottomTabNavigator();
   return (
-    <Tab.Navigator barStyle={{ backgroundColor: DefaultTheme.colors.primary }}>
+    <Tab.Navigator barStyle={{ backgroundColor: theme.colors.primary }}>
       <Tab.Screen
         options={{
           tabBarLabel: "Home",
