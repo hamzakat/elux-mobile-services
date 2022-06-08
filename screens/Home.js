@@ -30,6 +30,8 @@ const Home = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
 
   const submitInfo = (values) => {
+    Keyboard.dismiss();
+
     const fullPhoneNum = "352" + values.phoneNum;
     setLoading(true);
 
