@@ -17,6 +17,7 @@ const MainTab = () => {
         name="Home"
         component={MainStack}
       />
+      {/* TODO: Add "About" and "Settings" tabs */}
     </Tab.Navigator>
   );
 };

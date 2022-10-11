@@ -9,7 +9,6 @@ import {
   Colors,
 } from "react-native-paper";
 import { global } from "../styles/global";
-import { StyleSheet } from "react-native";
 import { useFormik, Formik } from "formik";
 import logo from "../assets/elux-logo.png";
 import * as Yup from "yup";
@@ -63,7 +62,7 @@ const Home = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={global.container}>
-        <View style={styles.logoContainer}>
+        <View style={global.logoContainer}>
           <Image source={logo} />
         </View>
 
@@ -116,7 +115,7 @@ const Home = ({ navigation }) => {
               {/* Submit Button */}
               <Button
                 mode="contained"
-                style={styles.button}
+                style={global.button}
                 onPress={handleSubmit}
               >
                 Submit
@@ -125,7 +124,7 @@ const Home = ({ navigation }) => {
               {/* Reset Button */}
               <Button
                 mode="outlined"
-                style={styles.button}
+                style={global.button}
                 onPress={handleReset}
               >
                 Reset
@@ -135,7 +134,7 @@ const Home = ({ navigation }) => {
         </Formik>
         {loading ? (
           <ActivityIndicator
-            style={styles.spinner}
+            style={global.spinner}
             size="large"
             animating={true}
             color={Colors.red700}
@@ -145,18 +144,5 @@ const Home = ({ navigation }) => {
     </TouchableWithoutFeedback>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    marginTop: 10,
-  },
-  logoContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 40,
-  },
-  spinner: { marginTop: 30 },
-});
 
 export default Home;
